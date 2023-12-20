@@ -229,7 +229,7 @@ async function resendOtp(state_token) {
 
 function rawURLQuery(url) {
     const index = url.indexOf('?');
-    return (index === 0) ? url.substr(index + 1) : "";
+    return (index >= 0) ? url.substr(index + 1) : "";
 }
 
 app.get('/', (req, res) => {
